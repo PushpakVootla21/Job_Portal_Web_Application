@@ -1,0 +1,15 @@
+<div class="form-container">
+<form [formGroup]="registerForm" class="form">
+    <p>Register for Jobhunt APP</p>
+    <div class="form-section">
+    <label>Enter Username</label>
+    <input type="text" formControlName="userName"/>
+    </div>
+    <div class="form-section">
+    <label>Enter Password</label>
+    <input type="password" formControlName="password"/>
+    </div>
+    <button (click)="onSubmit()" class="form-submit" style="color:#ffffff;background-color: #283653;">Register</button>
+    <a routerLink="/login">Already registered? Click here to login.</a>
+</form>
+</div>

@@ -1,0 +1,37 @@
+
+server:
+  port: 8085
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    
+    
+spring:
+  application:
+    name: jobhunt-apigateway
+  cloud:
+    gateway:
+      default-filters:
+          - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+        globalcors:
+          cors-configurations:
+            '[/**]':
+              allowedOrigins: "http://localhost:4200/"
+              allowedMethods: "*"
+              allowedHeaders: "*"
+        routes:
+          - id:jobhunt-JWTAuthService
+            uri:http://localhost:8080/
+            filters:
+              - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+            predicates:
+             - Path=/auth/**
+            
+            
+  

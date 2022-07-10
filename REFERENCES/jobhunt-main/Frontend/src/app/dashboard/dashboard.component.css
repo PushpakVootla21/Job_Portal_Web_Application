@@ -1,0 +1,37 @@
+
+.btn1{
+    padding: 1em 2em;
+    font-size: 20px;
+    width: fit-content;
+    background-color: #2e87ba;
+    border: none;
+    color: #ffffff;
+    border-radius: 30px;
+    font-family: 'Yusei Magic',sans-serif;
+    transition: all 0.3s ease;
+}
+.btn1:hover{
+    background-color: #ffffff;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+.dashboard-main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+    margin-top: 2em;
+}
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+  th, td {
+    background-color: #bdddf0;
+    padding: 15px;
+
+  }
+

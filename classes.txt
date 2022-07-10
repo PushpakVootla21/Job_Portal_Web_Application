@@ -1,0 +1,18 @@
+user
+-----
+private int id;
+private String name;
+private String email;
+private String password;
+private String qualification;
+private String role;
+
+jobs
+-------
+private int id;
+private String title;
+private String description;
+private String category;
+private String status;
+private String location;
+private String pdate;

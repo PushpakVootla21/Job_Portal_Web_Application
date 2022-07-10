@@ -1,0 +1,52 @@
+<div class="container" style="background-color:rgb(124, 195, 227);">
+    
+    <div class="navbar">
+      <div class="nav-left"></div>
+<div class="nav-right">
+   <button class="btn1" ><a routerLink="/search">Search</a></button>
+   <!-- <button class="btn1"><a routerLink="/edituser">Edit User</a></button> -->
+   <button class="btn1"><a routerLink="/favourites">Favourites</a></button>
+   <button class="btn1"><a routerLink="" (click)="signOut()">Log out</a></button>
+</div>
+</div>
+
+    <br><br><br>
+    
+    <div class="dashboard-main">
+            <!-- <h1>Welcome </h1> -->
+        <br><br><br>
+
+       
+               <table style="border: 5px">
+                  <thead style="text-align:center;">
+                     <tr>
+                        <th>Job Name</th>
+                        <th>Company</th>
+                        <th>Website</th>
+                        <th>Favourites</th> 
+
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr *ngFor="let job of jobs">
+                        
+                        <!-- job.refs.landing_page -->
+                        <td> {{job.name}}</td>
+
+                        <td>{{job.company.name}}</td>
+                        <td>
+                            <a href={{job.refs.landing_page}}>
+                              Apply Now
+                            </a> 
+                        </td>
+                  <td><button class="btn btn-danger" >Favourites</button></td>
+
+                     </tr>
+                  </tbody>
+               </table>
+            </div>   
+            
+    </div>
+      
+    
+

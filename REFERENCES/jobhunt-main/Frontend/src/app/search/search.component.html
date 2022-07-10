@@ -1,0 +1,51 @@
+
+<div class="container">
+    <div class="search-container">
+        <h1 class="search-header">Search Jobs</h1>
+        <form action="#" (submit)="onSubmit()" method="get">
+            <div class="search-section">
+                <input name="search" type="text" placeholder="E.g- 1" [(ngModel)]="pageNo"/>
+                <button type="submit">Search</button>
+            </div>
+            <br>
+            <br>
+        </form>
+
+            <!-- <div *ngFor="let job of jobs">
+                <h3>{{job.name}}</h3>
+                <p>{{job.description}}</p>
+            </div> -->
+            <table style="border: 5px">
+                <thead style="text-align:center;">
+                   <tr>
+                      <th>Job Name</th>
+                      <th>Company</th>
+                      <th>Website</th>
+                      <th>Favourites</th> 
+
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr *ngFor="let job of jobs">
+                      
+                      <!-- job.refs.landing_page -->
+                      <td> {{job.name}}</td>
+
+                      <td>{{job.company.name}}</td>
+                      <td>
+                          <a href={{job.refs.landing_page}}>
+                            Apply Now
+                          </a> 
+                      </td>
+                <td><button class="btn btn-danger" >Favourites</button></td>
+
+                   </tr>
+                </tbody>
+             </table>
+
+
+
+
+    </div>
+    
+</div>

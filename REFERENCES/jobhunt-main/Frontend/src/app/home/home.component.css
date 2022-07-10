@@ -1,0 +1,79 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .home-hero{
+    height: 92vh;
+    display: flex;
+    width: 100%;
+    padding: 2em 40px;
+    gap: 1em;
+    overflow: hidden;
+}
+.home-hero-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    padding-left: 2em;
+}
+.home-hero-header{
+    font-size: 48px;
+    font-family: 'Yusei Magic',sans-serif;
+    color: #ffffff;
+    max-width: 720px;
+}
+.home-hero-header span{
+    color: #29274c;
+    font-weight: 600;
+}
+.home-hero-desc{
+    font-size: 24px;
+    font-family: 'Yusei Magic',sans-serif;
+    max-width: 720px;
+    color: whitesmoke;
+}
+.home-hero-btn{
+    padding: 1em 2em;
+    font-size: 20px;
+    width: fit-content;
+    /* width: 10%; */
+    background-color: #246082;
+    border: none;
+    color: #ffffff;
+    border-radius: 30px;
+    font-family: 'Yusei Magic',sans-serif;
+    transition: all 0.3s ease;
+}
+.home-hero-btn:hover{
+    background-color: #a3e3e6;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+.home-hero-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2em;
+}
+.home-hero-right img{
+    width: 100%;
+    max-width: 800px;
+}
+@media only screen and (max-width:800px) {
+    .home-hero{
+        flex-direction: column;
+    }
+    .home-hero-left{
+        align-items: center;
+    }
+}
